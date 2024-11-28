@@ -1,3 +1,2 @@
-function calculate(a, b) {
-  return a + b;
-}
+// Упростил функцию для чистоты кода
+const calculate = (a, b) => (a + b);

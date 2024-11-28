@@ -1,22 +1,23 @@
 class SomeClass {
 
-  private neverUsedMethod() {
-      console.log("This function is called");
-  }
+    private neverUsedMethod() {
+        console.log("This function is called");
+    }
 
-  public someMethod() {
-      if (false) {
-          doSomethingThatNeverHappens();
-      }
+    public someMethod() {
+        // Это вообще не нужно, если никогда не случится. В коде мусор не нужен, только отвлекает.
+        //   if (false) {
+        //       doSomethingThatNeverHappens();
+        //   }
 
-      try {
-          this.doSomethingSafe();
-      } catch (Exception e) {
-          e.printStackTrace();
-      }
-  }
+        try {
+            this.doSomethingSafe();
+        } catch (error) {
+            error.printStackTrace();
+        }
+    }
 
-  private doSomethingSafe() {
-     console.log('Safe operation')
-  }
+    private doSomethingSafe() {
+        console.log('Safe operation')
+    }
 }

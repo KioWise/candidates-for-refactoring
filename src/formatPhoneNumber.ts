@@ -1,7 +1,5 @@
-function calculateTotalPrice(quantity, price) {
-  return quantity * price;
-}
+// Тела функций были растянуты. Упростил их, сделал более читабельными
+const calculateTotalPrice = (quantity, price) => (quantity * price)
 
-function formatPhoneNumber(number) {
-  return `(${number.slice(0, 3)}) ${number.slice(3, 6)}-${number.slice(6)}`;
-}
+const formatPhoneNumber = (number) => `(${number.slice(0, 3)}) ${number.slice(3, 6)}-${number.slice(6)}`;
+

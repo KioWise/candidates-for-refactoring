@@ -1,17 +1,12 @@
 class LowLevelModule {
-  doSomething() {
+  // Можно добавить модификатор static, чтобы не создавать экземпляр, а напрямую использовать метод.
+  static doSomething() {
     // реализация
   }
 }
 
 class HighLevelModule {
-  private lowLevelModule: LowLevelModule;
-
-  constructor() {
-    this.lowLevelModule = new LowLevelModule(); // создание экземпляра
-  }
-
   doSomethingElse() {
-    this.lowLevelModule.doSomething(); // использование непосредственной зависимости
+    LowLevelModule.doSomething() // Использование метода напрямую
   }
 }

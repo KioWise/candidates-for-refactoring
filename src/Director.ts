@@ -5,7 +5,7 @@ class Calendar {
 }
 
 class Director {
-  calendar: Calendar;
+  private calendar: Calendar; // Добавил модификатор доступа private, незачем всем смотреть календарь директора :)
 
   constructor(calendar: Calendar) {
     this.calendar = calendar;

@@ -7,3 +7,4 @@ class Some {
     return this.requestToCreateComment(comment);
   }
 }
+// Не увидел проблем
