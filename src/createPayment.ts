@@ -1,6 +1,7 @@
 const createPayment = (isToken: Boolean) => {
   if (isToken) {
-    const token = getUrl().slice();
+    // Убрал slice(), нет смысла его использовать
+    const token = getUrl();
     system.createTransaction(token).setTransaction();
   } else {
     const cardNumber = account.getCardNumber();

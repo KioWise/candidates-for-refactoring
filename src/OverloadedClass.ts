@@ -1,3 +1,4 @@
+// Так не стоит называть свойства, из-за этого можно запутаться, портит код, читаемость
 class OverloadedClass {
   field1: number;
   field2: string;

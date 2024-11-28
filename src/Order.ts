@@ -11,6 +11,7 @@ class Order {
 }
 
 class Customer {
+  // Нужно задать значение свойству items или сделать его необязательным
   private items: Item[];
 
   calculateTotalPrice(): number {

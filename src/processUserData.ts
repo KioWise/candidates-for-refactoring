@@ -1,4 +1,6 @@
-function processUserData(user) {
+// Переделал функцию в стрелочную. 
+// Лучше задать типы параметру и переменной
+const processUserData = (user) => {
   // Получаем данные пользователя
   const userData = getUserData(user);
 

@@ -1,9 +1,8 @@
-function add(a, b) {
-  return a + b;
-}
+// Упростил функцию
+const add = (a, b): number => (a + b);
 
 class Calculator2 {
-  multiply(a, b) {
+  multiply(a, b): number {
     return a * b;
   }
 }

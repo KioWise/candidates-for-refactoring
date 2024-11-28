@@ -8,7 +8,6 @@ type TGatewayService = {
 };
 
 const auth = (payment: TPayment, gateway: TGatewayService) => {
-  const rcCode = gateway.sendAuth(payment);
-
-  payment.rcCode = rcCode;
+  // Лучше сразу сделать запись, а не дробить на переменные, лишнее трата ресурсов
+  payment.rcCode = gateway.sendAuth(payment);
 };

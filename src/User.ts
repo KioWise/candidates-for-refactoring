@@ -1,50 +1,44 @@
 
-class User {
-  private name: string;
-  private age: number;
-  private address: string;
-  private phoneNumber: string;
-  private email: string;
-  private role: string;
-  private isActive: boolean;
-  private isVerified: boolean;
-  private isPremium: boolean;
-  private lastLogin: Date;
-  private registrationDate: Date;
-  private profilePicture: string;
-  private bio: string;
-  private interests: string[];
+// Создал отдельный interface для пользователя с данными. Упростит работу с огромным количеством кода
+interface UsersStorage {
+  name: string,
+  age: number,
+  address: string,
+  phoneNumber: string,
+  email: string,
+  role: string,
+  isActive: boolean,
+  isVerified: boolean,
+  isPremium: boolean,
+  lastLogin: Date,
+  registrationDate: Date,
+  profilePicture: string,
+  bio: string,
+  interests: string[]
+}
 
-  constructor(
-    name: string,
-    age: number,
-    address: string,
-    phoneNumber: string,
-    email: string,
-    role: string,
-    isActive: boolean,
-    isVerified: boolean,
-    isPremium: boolean,
-    lastLogin: Date,
-    registrationDate: Date,
-    profilePicture: string,
-    bio: string,
-    interests: string[]
-  ) {
-    this.name = name;
-    this.age = age;
-    this.address = address;
-    this.phoneNumber = phoneNumber;
-    this.email = email;
-    this.role = role;
-    this.isActive = isActive;
-    this.isVerified = isVerified;
-    this.isPremium = isPremium;
-    this.lastLogin = lastLogin;
-    this.registrationDate = registrationDate;
-    this.profilePicture = profilePicture;
-    this.bio = bio;
-    this.interests = interests;
+class User {
+  private user: UsersStorage;
+
+  // Убрал не нужные параметры, теперь в constructor нужно передать полноценного пользователя, это делает код чище, проще воспринимать.
+  constructor(userData: UsersStorage) {
+    // Запись пользователя можно сделать так, либо ещё уменьшить код и сделать через перебор имен по циклу for(let field in userData){....}
+    this.user = {
+      name: userData.name,
+      age: userData.age,
+      address: userData.address,
+      phoneNumber: userData.phoneNumber,
+      email: userData.email,
+      role: userData.role,
+      isActive: userData.isActive,
+      isVerified: userData.isVerified,
+      isPremium: userData.isPremium,
+      lastLogin: userData.lastLogin,
+      registrationDate: userData.registrationDate,
+      profilePicture: userData.profilePicture,
+      bio: userData.bio,
+      interests: userData.interests,
+    }
   }
 
   // ... (other methods)

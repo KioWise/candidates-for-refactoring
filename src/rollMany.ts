@@ -3,3 +3,4 @@ const rollMany = (n: number, pins: number) => {
     console.log(pins);
   }
 };
+// Косяков не обнаружил

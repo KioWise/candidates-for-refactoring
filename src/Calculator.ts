@@ -12,3 +12,4 @@ class Calculator {
     return a / b;
   }
 }
+// Тут и так всё хорошо :)

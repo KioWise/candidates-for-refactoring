@@ -1,14 +1,6 @@
-
 // Модуль 1
-function calculateTotalPrice(items) {
-  let totalPrice = 0;
-  items.forEach((item) => {
-    totalPrice += item.price;
-  });
-  return totalPrice;
-}
-
+// Лишние строчки кода. Лучше использовать reduce, делает код компактным, выполняет тоже самое.
+const calculateTotalPrice = (items) => (items.reduce((total, item) => total + item.price, 0))
 // Модуль 2
-function applyDiscount(totalPrice, discountPercentage) {
-  return totalPrice * (1 - discountPercentage / 100);
-}
+// Упростил функции для чистоты кода.
+const applyDiscount = (totalPrice, discountPercentage) => (totalPrice * (1 - discountPercentage / 100))
